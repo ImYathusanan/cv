@@ -1,0 +1,714 @@
+/*fonts */
+@import url(./fonts.css);
+/*------------*/
+
+body {
+   background-image: url(../images/paper.png); 
+   background-color: #eeeded;
+}
+
+h1 {  
+    color: #ffffff;
+    font-size: 5.6rem;
+    font-family: 'LPBambus', cursive;   
+}
+
+h2,h3,h4 {
+    font-family: 'Titillium_Web', sans-serif;
+    font-size: 2.5rem;
+    color: #170a19;
+    text-align: center;
+    margin-bottom: 2rem;  
+}
+
+h4 {
+    font-family: 'NanoSant';
+    font-size: 1.6rem;
+    color: #170a19;
+    text-align: center;
+}
+
+p {
+    font-family: 'NanoSant';
+    color: #170a19;
+    font-size: 1.3rem;
+}
+
+/*headings*/
+.head-place {
+    margin-top: 1.7rem;
+}
+/*Pre loader */
+ #overlayer {
+    width:100%;
+    height:100%;  
+    position:absolute;
+    z-index:1;
+    background-image: radial-gradient(circle, #ffffff, #f9f9f9, #f3f2f3, #eeebec, #e9e5e5);
+  }
+  .pre-loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index:3;
+    border: 2px solid #170a19;
+    border-radius: 4px;
+    left: 50%;
+    margin-left: -15px;
+    top: 50%;
+    margin-top: -15px;
+    animation: pre-loader 3s infinite ease;
+  }
+  
+  .inner-loader {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #170a19;
+    animation: inner-loader 3s infinite ease-in;
+  }
+  
+  @keyframes pre-loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes inner-loader {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+  }
+/*Headings */
+.mid-heading, .mid-heading2 {
+    font-size: 1.7rem;
+    text-align: left;
+}
+
+.mid-heading2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+#wht-title  {
+    font-family: 'Titillium_Web', sans-serif;
+    margin: 1rem 0 1rem 0;
+    color: #170a19;
+    text-align: center;
+}
+
+/* Name intro */
+.name-intro {
+    width: 550px;
+    height: 280px;
+    margin: auto auto;
+    text-align: center;
+}
+
+#intro-color {
+   font-family: 'Titillium_Web', sans-serif;
+   color: #f1ee2f;
+}
+
+
+.description-self {
+   background-color: #ffffff;
+   border-radius: 2px;
+   border-style: solid;
+   border-width: 1px;
+}
+
+/*Scroll down icon */
+.go-down {
+    left:50%;
+    top: 90%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: jump 2s infinite;
+}
+
+#icon-down {
+    color: #fff;
+}
+
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+  }
+
+/*Navigation bar */
+.line {
+    height: 3px;
+    width: 30px;
+    background: #05050d;
+    margin: 5px;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 20%;
+    top: 25%;
+}
+.navigation-bar {
+    height: 3rem;
+    width: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.6s;
+    opacity: 0;
+    margin-left: auto;
+}
+
+.navbar-scroll-down {
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #f7f7f7;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.6s;
+    opacity: 100;
+    margin-left: auto;
+}
+
+.nav-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px; 
+}
+
+.nav-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-overlay a:hover, .overlay a:focus {
+    color: #f1ee2f;
+}
+
+.nav-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+/* introduction */
+.pro-image {
+    margin: 0 auto 1rem auto;
+    border: 1px solid #05050d;
+    border-radius: 50%;
+    display: block;
+}
+
+.pro-div {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.about-me {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/*skill, edu, profile*/
+.profile {
+    height: 30rem;
+    padding: 5.5px;  
+}
+
+.whitebg {
+    background-color: white;
+    height: 29rem;
+    padding: 5px;
+    border-radius: 2px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;   
+}
+
+.color-border {
+    border-color: #000000;
+}
+
+.freelanmsg {
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-color: #170a19;
+    height: 30rem;
+    padding: 5.5px;
+    text-align: center;
+}
+.sep {
+    margin-top: 1rem;
+}
+
+/*icon section */
+.icon {
+    margin-bottom: 2rem;
+    color: #313131;
+}
+
+.activity-icon {
+    color: #313131;
+}
+
+.smile-icon {
+    color: rgb(226, 220, 220);
+}
+/*detail card */
+.detail-card {
+    color: #594a4e;
+}
+
+/*parallex effects */
+.parallex-me-intro {
+    height: 100vh;
+    background: #565868 url(../images/Intro.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+   
+}
+
+.paralex-audi {
+    height: 50vh;
+    background: #565868 url(../images/me-audi.jpg) no-repeat 50% 80% fixed;
+    background-size: cover;
+    position: relative;
+    padding-top: 18vh;
+}
+
+.parallex-eintein {
+    height: 50vh;
+    background: #565868 url(../images/einstein.jpg) no-repeat 50% 80% fixed;
+    background-size: cover;
+    position: relative;
+    padding-top: 15vh;
+    
+}
+
+.al-text {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.quote-align {
+    position: absolute;
+}
+
+/*overlay*/
+.overlay {
+    background: url(../images/net.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.al-quote-text {
+    font-family: 'Titillium_Web', sans-serif;
+    font-size: 1.7rem;
+    color: #f1fa3c;
+
+}
+
+#al-quote-text-explain {
+    font-family: 'NanoSant';
+    color: #e4e3e3;
+}
+
+.center-vert {
+    text-align: center;
+    position: relative;
+    padding-top: 5vh;
+}
+
+/*what can i do*/
+.wht-do {
+    margin-top: 3rem;
+}
+
+.freelance {
+    height: 15rem;
+    padding: 7px;
+}
+
+.freelancewhitebg {
+    background-color: white;
+    height: 14rem;
+    border-radius: 6px;
+    text-align: center;
+
+    border-style: solid;
+    border-width: 1px;
+    
+}
+
+.design-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*contact*/
+.contact {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    height: 15rem;
+    padding-top: 4rem;
+    border: 1px solid #170a19;
+    background: url(../images/contacts.png) repeat;
+    background-color: #ffffff;
+}
+
+.co-div {
+    margin: 2rem auto 1rem auto;
+}
+
+.btn {
+    margin-top: 1rem;
+}
+
+/*Skill bar */
+.skil-bar-container {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  #skil-title-color { 
+    font-family: 'NanoSant';
+    color: #594a4e;
+    font-size: 1.4rem;
+    margin-bottom: 1px;
+  }
+  
+  .bar {
+    width: 100%;
+    height: 10px;
+    background: #ebebeb;
+    border-radius: 4px;
+    position: relative;
+    transition: all 2s linear;
+  }
+  
+  .bar-1 {
+    width: 80%;
+    margin: 10px auto 25px;
+  }
+  
+  .bar-inner {
+    width: 0;
+    height: 10px;
+    line-height: 20px;
+    border-radius: 4px;
+    background-color: #747272;
+  }
+  
+  #bar-percent {
+    font-family: 'Heebo', sans-serif;
+    float:right;
+    right: 10px;
+    top: 1.5px;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+/*fun facts */
+.center {
+    text-align: center;
+    padding: 80px 0 40px 0;
+}
+
+
+#out-activity {
+    font-family: 'Titillium_Web', sans-serif;
+    font-size: 1.4rem;
+    color: #615d5d;
+}
+
+.fun-title {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    padding-top: 0.4rem;
+}
+
+.facts {
+    width: 100%;
+    height: 13rem;
+    text-align: center;
+    padding: 2px;
+}
+
+.factswhitebg {
+    background-color: white;
+    height: 12rem;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 5% 10%;
+    text-align: center; 
+}
+
+.testimonials-image {
+    width: 10%;
+    border-radius: 25%;
+    margin: 2px;
+}
+
+.carousel-inner {
+    height: 235px;
+}
+
+/*Projects*/
+.project-whitebg {
+    background-color: white;
+    height: 17rem;
+    width: 100%;
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 45px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.pro-card {
+    height: 30vh;
+    padding-top: 65px;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+
+.fun-content {
+    font-family: 'NanoSant';
+    color: #170a19;
+    font-size: 1rem;
+}
+
+
+/*form control*/
+.form-control:focus {
+    border-color: #170a19;
+    box-shadow: inset 0 0 1px #170a19, 0 0 5px #565868;
+}
+
+.input-text, .labelsle {
+    font-family: 'NanoSant';
+    color: #565868;
+}
+
+.labelsle {
+  font-family: 'Titillium_web', sans-serif;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #170a19;
+    font-family: 'Titillium_web', sans-serif;
+    border: 1px solid #818181;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    border: 1px solid #818181;
+}
+
+
+/*footer*/
+.footer {
+    height: 6rem;
+    width: 100%;
+    background-color: #05050d;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+#f-color, #f-color-two {
+    font-family: 'Titillium_Web', sans-serif;
+    font-size: 1.2rem;
+    color: #ffff;
+}
+
+#f-color-two {
+    font-size: 1rem;
+}
+
+/****** back to top button */
+#button-top {
+    display: inline-block;
+    background-color: #4a4a48;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button-top::after {
+    content: "\2191";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button-top:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button-top:active {
+    background-color: #555;
+}
+
+#button-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*resposive conditions */
+@media only screen and (max-width: 762px) {
+
+    .profile {
+        height: 30rem;
+        padding: 5.5px;
+       
+    }
+
+    .carousel-inner {
+        height: 450px;
+    }
+
+    .paralex-audi {
+        padding-top: 12vh;
+    }
+
+    .parallex-eintein {
+        padding-top: 9vh;
+    }
+
+    .freelanmsg {
+        border-style: solid;
+        border-width: 1px 0 0 1px;
+        border-color: #05050d;
+        height: 35rem;
+        text-align: center;
+    }
+
+
+    .freelance {
+        height: 20rem;
+        padding: 7px;
+    }
+
+    .freelancewhitebg {
+        background-color: white;
+        height: 19rem;
+        border-radius: 6px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #170a19;
+    }
+
+
+    .facts {
+        width: 100%;
+        height: 13rem;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .factswhitebg {
+        background-color: white;
+        height: 12rem;
+        border-radius: 1px;
+        text-align: center;
+        padding-top: 10px;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+}
+

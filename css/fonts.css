@@ -1,0 +1,20 @@
+/* Font face */
+@font-face {
+    font-family: LPBambus;
+    src: url(../fonts/Lb_Bambus/LPBambus.ttf);
+}
+@font-face {
+    font-family: Bilbo;
+    src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
+}
+
+@font-face {
+    font-family: NanoSant;
+    src: url(../fonts/NanoSant/NotoSansJP-Regular.otf)
+}
+
+
+@font-face {
+    font-family: Titillium_Web;
+    src: url(../fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
